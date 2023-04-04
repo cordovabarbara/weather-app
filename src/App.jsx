@@ -33,8 +33,9 @@ function App() {
       axios.get (url)
       .then(res => { 
         const celsius = (res.data.main.temp - 273.15).toFixed(1)
-        const farenheit = (celsius*9/5 + 32).toFixed(1)
+        const farenheit = (celsius * 9/5 + 32).toFixed(1)
         
+        settemperature({ celsius, farenheit})
         setWeather(res.data)
       
       })
@@ -45,7 +46,11 @@ function App() {
   
   return (
     <div className="App">
-    <WeatherApp weather={weather}/>
+    <WeatherApp 
+    weather={weather}
+    temperature={temperature}
+
+    />
         
     </div>
   )

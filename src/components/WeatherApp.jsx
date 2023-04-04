@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WeatherApp = ({weather}) => {
+const WeatherApp = ({weather, temperature}) => {
     console.log(weather);
   return (
     <div>
