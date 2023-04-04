@@ -5,8 +5,8 @@ const WeatherApp = ({weather}) => {
   return (
     <div>
     <h1>Weather App</h1>
-    <h2>{weather?.name},{weather?.sys.country}</h2>
-    <p>{weather?.weather[0].description}, {weather?.weather[0].main}</p>
+    <h2>{weather?.name}, {weather?.sys.country}</h2>
+    <p>{weather?.weather[0].description},{weather?.weather[0].main}</p>
     </div>
 )
 }
