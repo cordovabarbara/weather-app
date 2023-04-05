@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import './App.css'
 import WeatherApp from './components/WeatherApp'
+import LoadingPage from './components/LoadingPage'
 
 function App() {
 
@@ -45,11 +46,15 @@ function App() {
   }, [latlon])
   
   return (
-    <div className="App">
-    <WeatherApp 
-    weather={weather}
-    temperature={temperature}
-    />
+  <div className="App">
+    {
+      weather? 
+      <WeatherApp 
+      weather={weather}
+      temperature={temperature}/>
+
+      : <LoadingPage/>
+    }
     </div>
   )
 }
