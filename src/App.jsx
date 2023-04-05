@@ -49,9 +49,7 @@ function App() {
     <WeatherApp 
     weather={weather}
     temperature={temperature}
-
     />
-        
     </div>
   )
 }
