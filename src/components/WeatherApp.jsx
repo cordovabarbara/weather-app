@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 
 const WeatherApp = ({weather, temperature}) => {
 
-  const [gradeTemperature, setgradeTemperature] = useState(true)
+  const [gradeTemperature, setGradeTemperature] = useState(true)
 
-  const changeTemperature = () => {setgradeTemperature(!gradeTemperature)}
+  const changeTemperature = () => {setGradeTemperature(!gradeTemperature)}
 
   console.log(weather);
 
@@ -12,10 +12,13 @@ const WeatherApp = ({weather, temperature}) => {
   return (
     <div>
     <h1>Weather App</h1>
-    <h2>{weather?.name},{weather?.sys.country}</h2>
+    <h2>{weather?.name}, {weather?.sys.country}</h2>
     <img src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt=''/>
-    <p>{weather?.weather[0].description}, {weather?.weather[0].main}</p>
-    <p>WindSpeed: {weather?.wind.speed}</p>
+
+    <p>"{weather?.weather[0].description.replace(/\b(\w{1})/g,(match) => match.toUpperCase())}"</p>
+    <p><span>Clouds:</span> {weather?.clouds.all} %</p>
+    <p><span>WindSpeed:</span> {weather?.wind.speed} m/s</p>
+    <p><span>Preassure:</span> {weather?.main.pressure} hPa</p>
 
     <div>
       <p>
