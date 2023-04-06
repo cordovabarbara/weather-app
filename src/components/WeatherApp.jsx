@@ -16,9 +16,12 @@ const WeatherApp = ({weather, temperature}) => {
     <img src={`https://openweathermap.org/img/wn/${weather?.weather[0].icon}@4x.png`} alt=''/>
 
     <p>"{weather?.weather[0].description.replace(/\b(\w{1})/g,(match) => match.toUpperCase())}"</p>
-    <p><span>Clouds:</span> {weather?.clouds.all} %</p>
-    <p><span>WindSpeed:</span> {weather?.wind.speed} m/s</p>
-    <p><span>Preassure:</span> {weather?.main.pressure} hPa</p>
+    <ul>
+    <li><span>Clouds:</span> {weather?.clouds.all} %</li>
+    <li><span>WindSpeed:</span> {weather?.wind.speed} m/s</li>
+    <li><span>Preassure:</span> {weather?.main.pressure} hPa</li>
+    </ul>
+
 
     <div>
       <p>
