@@ -58,6 +58,7 @@ function App() {
   const buttonSubmit = e => 
   {e.preventDefault()
     setInputCity(e.target.nameCountry.value)
+    e.target.nameCountry.value=''
   }
   
   return (
@@ -74,10 +75,9 @@ function App() {
       : <LoadingPage/>
     }
 
-    
     <form onSubmit={buttonSubmit}>
-    <input id='nameCountry' type='text'></input>
-    <button> Search</button>
+    <input id='nameCountry' placeholder='City name' type='text'></input>
+    <button className='search'> Search</button>
     </form>
     </div>
   )

@@ -2,7 +2,9 @@
 
 function CatchError() {
   return (
-    <div>Sorry, the city is not found, please try again</div>
+    <div>
+    <h3>Sorry, the city is not found, please try again.</h3>
+    </div>
   )
 }
 

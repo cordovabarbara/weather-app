@@ -2,7 +2,7 @@ import React from 'react'
 
 const LoadingPage = () => {
   return (
-    <h1>Please wait...</h1>
+    <h2>Please wait...</h2>
   )
 }
 

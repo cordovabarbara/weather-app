@@ -2,10 +2,80 @@
 
 :root {
     --font: 'Jost', sans-serif;
+    --font-size--title1: 30px;
+    --font-size--title2: 25px;
+    --font-size--title3: 22px;
+    --text-size1: 18px;
+    
 }
 
 *{
-    font-family: var(--font);    
+    font-family: var(--font);   
+    box-sizing: border-box;
+    margin: 0;
+
+}
+
+body{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: var(--font-size--title1);
+    margin-bottom: 1rem;
 }
 
 
+h2{
+    font-size: var(--font-size--title2);
+    margin-bottom: 1rem;
+}
+
+li{
+    list-style: none;
+    margin: 0;
+}
+
+.general__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    max-height: 500px;
+    min-height: 600px;
+    min-width: 500px;
+    
+
+
+}
+
+.descrip__box{
+    font-size: var(--font-size--title3);
+}
+
+.general__second{
+    padding: 2rem 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    border-radius: 1rem;
+}
+
+.img__temp{
+    width: 150px;
+    height: 150px;
+}
+
+.general__second li{
+    font-size: var(--text-size1);
+}
+
+li span{
+    font-weight: bold;
+}
