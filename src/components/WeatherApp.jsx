@@ -24,7 +24,7 @@ const WeatherApp = ({weather, temperature}) => {
     </div>
 
 
-    <div>
+    <div className='text__temp'>
       <p>
       {
         gradeTemperature
@@ -33,7 +33,7 @@ const WeatherApp = ({weather, temperature}) => {
       }
 
       </p>
-      <button onClick={changeTemperature}>Change to {gradeTemperature ? "°F" : "°C"}</button>
+      <button className='change__temp' onClick={changeTemperature}>Change to {gradeTemperature ? "°F" : "°C"}</button>
     </div>
     </div>
 )

@@ -2,7 +2,8 @@ import React from 'react'
 
 const LoadingPage = () => {
   return (
-    <h2>Please wait...</h2>
+    <div className='loadingPage'><p className='p_loading'>Please wait...</p></div>
+
   )
 }
 

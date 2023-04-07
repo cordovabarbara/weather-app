@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import 'animate.css';
 
 :root {
     --font: 'Jost', sans-serif;
@@ -19,9 +20,14 @@
 body{
 
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(./public/img/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 h1{
@@ -40,17 +46,20 @@ li{
     margin: 0;
 }
 
+
+
 .general__box{
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 500px;
-    max-height: 500px;
-    min-height: 600px;
-    min-width: 500px;
-    
-
+    max-height: 400px;
+    min-height: 500px;
+    min-width: 300px;
+    background-color: rgba(184, 184, 184, 0.5);
+    border-radius: 2rem;
 
 }
 
@@ -70,12 +79,70 @@ li{
 .img__temp{
     width: 150px;
     height: 150px;
+    animation: pulse ease-in-out infinite;
+    animation-duration: 1s;
 }
 
 .general__second li{
     font-size: var(--text-size1);
 }
 
+.loadingPage{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 li span{
     font-weight: bold;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+input{
+    background-color: darksalmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text__temp{
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.change__temp{
+    background-color: black;
+    font-size: var(--text-size1);
+    border-radius: 1rem;
+    color: azure;
+    height: 40px;
+    width: 130px;
+    border: none;
+}
+
+.change__temp:hover{
+    background-color: white;
+    color: black;
+    transition: background-color 0.5s;
+}
+
+.p_loading{
+    color: rgb(204, 146, 20);
+    font-size: var(--font-size--title1);
+    display: inline-block;
+    margin: 0 0.5rem;
+    animation: bounce ease-in-out infinite;
+    animation-duration: 3s;
 }

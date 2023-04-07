@@ -67,18 +67,20 @@ function App() {
       catchError
       ? <CatchError/>
       :
-      weather? 
+      weather? (
+      <div>
       <WeatherApp 
       weather={weather}
       temperature={temperature}/>
+        <form onSubmit={buttonSubmit}>
+        <input id='nameCountry' placeholder='City name' type='text'></input>
+        <button className='search'> Search</button>
+        </form>
+      </div>
 
-      : <LoadingPage/>
+      ): <LoadingPage/>
     }
 
-    <form onSubmit={buttonSubmit}>
-    <input id='nameCountry' placeholder='City name' type='text'></input>
-    <button className='search'> Search</button>
-    </form>
     </div>
   )
 }
