@@ -6,7 +6,10 @@
     --font-size--title1: 30px;
     --font-size--title2: 25px;
     --font-size--title3: 22px;
-    --text-size1: 18px;
+    --text-size1: 16px;
+    --color-first:rgb(255, 255, 255);
+    --back-color:rgba(9, 2, 32, 0.438);
+    --botton-color: rgb(9, 2, 32);
     
 }
 
@@ -24,7 +27,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(./public/img/back.jpg);
+    background-image: url(./public/img/back2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -33,12 +36,13 @@ body{
 h1{
     font-size: var(--font-size--title1);
     margin-bottom: 1rem;
+    color: var(--color-first);
 }
-
 
 h2{
     font-size: var(--font-size--title2);
     margin-bottom: 1rem;
+    color: var(--color-first);
 }
 
 li{
@@ -58,13 +62,14 @@ li{
     max-height: 400px;
     min-height: 500px;
     min-width: 300px;
-    background-color: rgba(184, 184, 184, 0.5);
+    background-color: var(--back-color);
     border-radius: 2rem;
 
 }
 
 .descrip__box{
     font-size: var(--font-size--title3);
+    color: var(--color-first);
 }
 
 .general__second{
@@ -85,6 +90,7 @@ li{
 
 .general__second li{
     font-size: var(--text-size1);
+    color: var(--color-first);
 }
 
 .loadingPage{
@@ -104,13 +110,21 @@ form{
     justify-content: center;
     align-items: center;
     padding-bottom: 2rem;
+    border-bottom: none;
 }
 
 input{
-    background-color: darksalmon;
+    background-color: none;
+    border-bottom: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 40px;
+    width: 200px;
+    border-radius: 1rem;
+    color: var(--color-first);
+    font-size: 20px;
+
 }
 
 .text__temp{
@@ -121,12 +135,14 @@ input{
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    color: var(--color-first);
+
 }
 .change__temp{
-    background-color: black;
+    background-color: var(--botton-color);
     font-size: var(--text-size1);
     border-radius: 1rem;
-    color: azure;
+    color: var(--color-second);
     height: 40px;
     width: 130px;
     border: none;
@@ -134,15 +150,15 @@ input{
 
 .change__temp:hover{
     background-color: white;
-    color: black;
+    color: var(--botton-color);
     transition: background-color 0.5s;
+    font-size: var(--text-size1);
 }
 
 .p_loading{
-    color: rgb(204, 146, 20);
+    color: rgb(245, 169, 4);
     font-size: var(--font-size--title1);
     display: inline-block;
-    margin: 0 0.5rem;
     animation: bounce ease-in-out infinite;
-    animation-duration: 3s;
+    animation-duration: 2.5s;
 }
