@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import WeatherApp from './components/WeatherApp'
 import LoadingPage from './components/LoadingPage'
-import CatchError from './components/CatchError'
+
 
 function App() {
 
@@ -64,9 +64,7 @@ function App() {
   return (
   <div className="App">
     {
-      catchError
-      ? <CatchError/>
-      :
+    
       weather? (
       <div>
       <WeatherApp 
@@ -76,6 +74,14 @@ function App() {
         <input id='nameCountry' placeholder='City name' type='text'></input>
         <button className='search'> Search</button>
         </form>
+        {
+          catchError &&
+          (
+          <h3>
+          Sorry, the city is not found, please try again.
+          </h3>
+          )
+        }
       </div>
 
       ): <LoadingPage/>
