@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import WeatherApp from './components/WeatherApp'
 import LoadingPage from './components/LoadingPage'
+import CatchError from './components/CatchError'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
   const [weather, setWeather] = useState()
   const [temperature, settemperature] = useState()
   const [inputCity, setInputCity] = useState("")
+  const [catchError, setcatchError] = useState(false)
 
 
 
@@ -41,9 +43,13 @@ function App() {
         
         settemperature({ celsius, farenheit})
         setWeather(res.data)
+        setcatchError(false)
+
       
       })
-      .catch(error => console.log(error))
+      .catch(error => 
+        {console.log(error) 
+        setcatchError(true)})
     }
     
   }, [latlon, inputCity])
@@ -57,6 +63,9 @@ function App() {
   return (
   <div className="App">
     {
+      catchError
+      ? <CatchError/>
+      :
       weather? 
       <WeatherApp 
       weather={weather}
