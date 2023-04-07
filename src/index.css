@@ -6,10 +6,12 @@
     --font-size--title1: 30px;
     --font-size--title2: 25px;
     --font-size--title3: 22px;
-    --text-size1: 16px;
+    --text-size1: 18px;
     --color-first:rgb(255, 255, 255);
     --back-color:rgba(9, 2, 32, 0.438);
     --botton-color: rgb(9, 2, 32);
+    --text-error: rgb(149, 209, 81);
+    --loading:rgb(245, 169, 4);
     
 }
 
@@ -46,7 +48,11 @@ h2{
 }
 
 h3{
-    color: var(--color-first);
+    color: var(--text-error);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1.5rem;
 }
 
 li{
@@ -127,6 +133,7 @@ input{
     border-radius: 1rem;
     color: var(--botton-color);
     font-size: 20px;
+    margin-top: 1rem;
 
 }
 
@@ -152,14 +159,14 @@ input{
 }
 
 .change__temp:hover{
-    background-color: white;
+    background-color: var(--color-first);
     color: var(--botton-color);
     transition: background-color 0.5s;
     font-size: var(--text-size1);
 }
 
 .p_loading{
-    color: rgb(245, 169, 4);
+    color: var(--loading);
     font-size: var(--font-size--title1);
     display: inline-block;
     animation: bounce ease-in-out infinite;
@@ -174,10 +181,11 @@ input{
     border-radius: 2rem;
     color: var(--color-first);
     border: none;
+    margin-top: 1rem;
 }
 
 .search:hover{
-    background-color: white;
+    background-color: var(--color-first);
     color: var(--botton-color);
     transition: background-color 0.5s;
     font-size: var(--text-size1);
