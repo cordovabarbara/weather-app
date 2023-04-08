@@ -4,6 +4,7 @@ import './App.css'
 import WeatherApp from './components/WeatherApp'
 import LoadingPage from './components/LoadingPage'
 import imageRandom from './utils/ImageRandom'
+import ButtonSearch from './components/ButtonSearch'
 
 
 const img =[1,2,3,4,5]
@@ -78,7 +79,7 @@ const style = {
       temperature={temperature}/>
         <form onSubmit={buttonSubmit}>
         <input id='nameCountry' placeholder='City name' type='text'></input>
-        <button className='search'> Search</button>
+        <ButtonSearch setarrayImg={setarrayImg}/>
         </form>
         {
           catchError &&
