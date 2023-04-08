@@ -8,7 +8,6 @@ const WeatherApp = ({weather, temperature}) => {
 
 
   return (
-    
     <div className='general__box'>
     <h1>Weather App</h1>
     <h2>{weather?.name}, {weather?.sys.country}</h2>

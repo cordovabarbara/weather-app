@@ -20,7 +20,7 @@ function App() {
   const [arrayImg, setarrayImg] = useState(imageRandom(img))
 
 const style = {
-  background: `url('./img/back${arrayImg}.jpg')`
+  backgroundImage: `url('./img/back${arrayImg}.jpg')`
 }
 
   useEffect(() => {
