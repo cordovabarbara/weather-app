@@ -3,6 +3,10 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import WeatherApp from './components/WeatherApp'
 import LoadingPage from './components/LoadingPage'
+import imageRandom from './utils/ImageRandom'
+
+
+const img =[1,2,3,4,5]
 
 
 function App() {
@@ -12,8 +16,11 @@ function App() {
   const [temperature, settemperature] = useState()
   const [inputCity, setInputCity] = useState("")
   const [catchError, setcatchError] = useState(false)
+  const [arrayImg, setarrayImg] = useState(imageRandom(img))
 
-
+const style = {
+  background: `url('./img/back${arrayImg}.jpg')`
+}
 
   useEffect(() => {
 
@@ -62,10 +69,8 @@ function App() {
   }
   
   return (
-  <div className="App">
-      
+  <div style={style} className="App">
     {
-    
       weather? (
       <div>
       <WeatherApp 
