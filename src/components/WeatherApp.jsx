@@ -8,6 +8,7 @@ const WeatherApp = ({weather, temperature}) => {
 
 
   return (
+    
     <div className='general__box'>
     <h1>Weather App</h1>
     <h2>{weather?.name}, {weather?.sys.country}</h2>
@@ -34,6 +35,7 @@ const WeatherApp = ({weather, temperature}) => {
 
       </p>
       <button className='change__temp' onClick={changeTemperature}>Change to {gradeTemperature ? "°F" : "°C"}</button>
+
     </div>
     </div>
 )
